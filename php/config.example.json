@@ -1,0 +1,9 @@
+{
+    "email_notificacao": "arquivo@empresa.com.br",
+    "backup_path": "",
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": "587",
+    "smtp_secure": "tls",
+    "smtp_user": "conta.de.envio@gmail.com",
+    "smtp_pass": "SENHA_DE_APP"
+}

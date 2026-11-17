@@ -1,0 +1,39 @@
+# Dependências do Composer (instalar com: composer install)
+/vendor/
+
+# Configurações com senha — ficam só no servidor
+/includes/config.local.php
+/php/config.json
+
+# Dados e arquivos gerados em produção (documentos digitalizados, anexos, backups)
+/uploads/*
+!/uploads/.htaccess
+/backup_temp/*
+!/backup_temp/.htaccess
+/paginas/*
+/documentos/*
+/thumbs/*
+!/paginas/.gitkeep
+!/documentos/.gitkeep
+!/thumbs/.gitkeep
+/backups/
+/tmp/
+/cache/
+/includes/last_romaneio_check.txt
+
+# Dados internos do Arquivo (lista de livros) — fica só no servidor
+/planilha_arquivo.xlsx
+
+# Logs, dumps e pacotes
+*.log
+*.sql
+!/db/*.sql
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.pdf
+
+node_modules/
+allfiles.txt

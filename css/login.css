@@ -1,0 +1,48 @@
+/* Tela de entrada */
+.login-page { min-height: 100vh; display: grid; grid-template-columns: minmax(380px, 46%) 1fr; background: var(--bg); }
+.login-aside {
+    position: relative; overflow: hidden; background: var(--ink-800); color: #C9D2E3;
+    display: flex; flex-direction: column; padding: 44px 52px 0;
+}
+.login-brand { display: flex; align-items: center; gap: 12px; color: #fff; font-size: 20px; font-weight: 600; }
+.login-brand img { width: 40px; height: 40px; }
+.login-pitch { margin-top: auto; margin-bottom: 40px; max-width: 460px; }
+.login-pitch h2 { color: #fff; font-size: 34px; font-weight: 600; line-height: 1.15; letter-spacing: -.015em; margin-bottom: 26px; }
+.login-pitch ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.login-pitch li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; font-size: 15.5px; line-height: 1.5; }
+.login-pitch li i { color: var(--brass-500); margin-top: 4px; }
+/* Prateleira de caixas: lombadas de arquivo estilizadas */
+.login-shelf { display: flex; align-items: flex-end; gap: 6px; height: 150px; border-bottom: 10px solid #0B1426; margin: 0 -52px; padding: 0 52px; }
+.login-shelf span { flex: 1; border-radius: 4px 4px 0 0; background: #233659; position: relative; }
+.login-shelf span::after { content: ""; position: absolute; left: 22%; right: 22%; top: 18px; height: 26px; border-radius: 2px; background: rgba(255,255,255,.10); }
+.login-shelf span:nth-child(1) { height: 78%; }
+.login-shelf span:nth-child(2) { height: 92%; background: var(--brass-600); }
+.login-shelf span:nth-child(2)::after { background: rgba(255,255,255,.28); }
+.login-shelf span:nth-child(3) { height: 70%; }
+.login-shelf span:nth-child(4) { height: 86%; background: #2C4475; }
+.login-shelf span:nth-child(5) { height: 64%; }
+.login-shelf span:nth-child(6) { height: 95%; background: #1B2B4A; }
+.login-shelf span:nth-child(7) { height: 74%; background: var(--brass-500); opacity: .85; }
+.login-shelf span:nth-child(8) { height: 88%; }
+.login-shelf span:nth-child(9) { height: 68%; background: #2C4475; }
+
+.login-main { display: grid; place-items: center; padding: 32px 20px; }
+.login-card { width: 100%; max-width: 400px; display: grid; gap: 18px; }
+.login-card h1 { font-size: 28px; font-weight: 600; letter-spacing: -.01em; }
+.login-lead { color: var(--text-2); margin-top: -10px; }
+.login-card .alert { margin: 0; }
+.login-card .field input { height: 46px; }
+.password-wrap input { padding-right: 46px !important; }
+.pw-toggle { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 38px; height: 38px; border: 0; background: none; color: var(--text-3); cursor: pointer; border-radius: var(--radius-xs); }
+.pw-toggle:hover { color: var(--text); background: var(--surface-3); }
+.login-submit { height: 46px; font-size: 15.5px; margin-top: 4px; }
+.login-foot { font-size: 13.5px; color: var(--text-3); text-align: center; }
+.login-logo-mobile { display: none; width: 52px; }
+#caps { color: var(--warning); }
+
+@media (max-width: 860px) {
+    .login-page { grid-template-columns: 1fr; }
+    .login-aside { display: none; }
+    .login-logo-mobile { display: block; }
+    .login-main { align-items: start; padding-top: 12vh; }
+}

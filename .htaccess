@@ -1,0 +1,19 @@
+# ReviverDoc — proteções de acesso (Apache)
+Options -Indexes
+
+# Arquivos sensíveis: configurações, dumps, dependências e utilitários internos
+<FilesMatch "(^config\.json|^composer\.(json|lock)|^package(-lock)?\.json|\.sql|\.log|\.bak|^\.git.*|^allfiles\.txt|^last_romaneio_check\.txt|^planilha_arquivo\.xlsx|^config\.local\.php)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
